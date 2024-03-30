@@ -39,3 +39,11 @@ class InterfaceForMaxHeap(ABC):
     @abstractmethod
     def sort(self):
         pass
+
+
+class Max_Heap(InterfaceForMaxHeap):
+    """The implementation for max heap"""
+    def __init__(self) -> None:
+        super().__init__()
+        self.size = 0
+        self.heap = []
