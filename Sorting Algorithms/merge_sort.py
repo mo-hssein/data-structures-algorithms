@@ -39,7 +39,7 @@ def merge_sort(arr):
     This function sorts the list using merge sort algorithm.
 
     Args:
-    - arr (list): The list to be sorted.
+    - arr (list): The list to be sorted
 
     Returns:
     - list: The sorted list.
