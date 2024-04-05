@@ -4,6 +4,7 @@ import unittest
 def merge(left_half, right_half):
     """
     This function merges two sorted halves of a list.
+    Time complexty = O(m+n)
 
     Args:
     - left_half (list): The left half of the list.
@@ -37,6 +38,7 @@ def merge(left_half, right_half):
 def merge_sort(arr):
     """
     This function sorts the list using merge sort algorithm.
+    Time complexty = O(n log n)
 
     Args:
     - arr (list): The list to be sorted
@@ -63,6 +65,7 @@ def merge_sort(arr):
 #      |
 #      V
 
+
 class TestMergeSort(unittest.TestCase):
     def test_merge_sort(self):
         arr_unsorted = [5, 2, 8, 3, 1]
@@ -76,6 +79,7 @@ class TestMergeSort(unittest.TestCase):
 
         arr_duplicate = [3, 2, 5, 2, 3]
         self.assertEqual(merge_sort(arr_duplicate), [2, 2, 3, 3, 5])
+
 
 if __name__ == "__main__":
     unittest.main()
