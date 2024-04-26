@@ -13,16 +13,15 @@ class Node:
         - left (node[class]): The left child node (default is None).
         - right (node[class]): The right child node (default is None).
         """
-        self.ch = char  # The character contained in the node
+        self.char = char  # The character contained in the node
         self.freq = freq  # The frequency or occurrences of the character in the text
         self.left = left  # The left child node
         self.right = right  # The right child node
 
-
     def __lt__(self, other):
         """
         Compares the frequency of this node with the frequency of another node for the purpose of less-than comparison.
-    
+
 
         Parameters:
         - other : Another Node object to compare with this node.
@@ -71,3 +70,30 @@ def get_huffman_tree(text):
     # Get the root of the Huffman tree
     root = pq[0]
     return root
+
+
+def generate_huffman_code(root, code="", codes={}) -> dict:
+    """
+    Generates Huffman codes for characters in the Huffman tree recursively.
+    time compleixty = O(n)
+
+    Parameters:
+    - root (node): The root node of the Huffman tree.
+    - code (str): The binary code generated so far during traversal (default is an empty string).
+    - codes (dict): A dictionary to store the Huffman codes for characters (default is an empty dictionary).
+
+    Returns:
+    - codes (dict): A dictionary mapping characters to their corresponding Huffman codes.
+    """
+    if root is not None:
+        if (
+            root.char is not None
+        ):  # If the current node is a leaf node (contains a character)
+            codes[root.char] = code  # Assign the Huffman code for the character
+
+        # Traverse left subtree with code '0'
+        generate_huffman_code(root.left, code + "0", codes)
+
+        # Traverse right subtree with code '1'
+        generate_huffman_code(root.right, code + "1", codes)
+    return codes
