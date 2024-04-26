@@ -18,13 +18,27 @@ class Node:
         self.left = left  # The left child node
         self.right = right  # The right child node
 
+
     def __lt__(self, other):
-        return self.freq > other.freq
+        """
+        Compares the frequency of this node with the frequency of another node for the purpose of less-than comparison.
+    
+
+        Parameters:
+        - other : Another Node object to compare with this node.
+
+        Returns:
+        - True
+        or
+        - False
+        """
+        return self.freq < other.freq
 
 
 def get_huffman_tree(text):
     """
     Constructs a Huffman tree based on the frequency of characters in the given text.
+    time complexity = O(n log n)
 
     Parameters:
     - text (str): The input text for which the Huffman tree is to be constructed.
