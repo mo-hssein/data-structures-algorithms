@@ -7,7 +7,7 @@ def swap(arr, item_one, item_two):
     time complexty = O(1)
 
 
-    Args:
+    Parameters:
     - arr (list): The list containing the elements to be swapped.
     - item_one (int): The index of the first item to be swapped.
     - item_two (int): The index of the second item to be swapped.
@@ -20,7 +20,7 @@ def partition(arr, low, high):
     This function partitions the list around the pivot element.
     time complexty = O(n)
 
-    Args:
+    Parameters:
     - arr (list): The list to be partitioned.
     - low (int): The index for the lower bound.
     - high (int): The index for the upper bound.
@@ -43,7 +43,7 @@ def quick_sort(arr, low, high):
     Sorts a list of integers using the quicksort algorithm.
     time complexty = O(n log n)
 
-    Args:
+    Parameters:
     - arr (list): The list to be sorted.
     - low (int): The index of the first element in the sublist.
     - high (int): The index of the last element in the sublist.

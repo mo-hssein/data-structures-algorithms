@@ -40,7 +40,7 @@ def merge_sort(arr):
     This function sorts the list using merge sort algorithm.
     Time complexty = O(n log n)
 
-    Args:
+    Parameters:
     - arr (list): The list to be sorted
 
     Returns:

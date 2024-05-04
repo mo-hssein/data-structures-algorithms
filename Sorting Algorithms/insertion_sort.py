@@ -5,7 +5,7 @@ def insertion_sort(arr):
     Insertion sorting algorithm.
     Time complexty = O(n^2)
 
-    Args:
+    Parameters:
     - arr (list): Unsorted array
     """
     n = len(arr)

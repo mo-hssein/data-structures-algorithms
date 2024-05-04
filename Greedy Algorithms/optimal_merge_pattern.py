@@ -6,7 +6,7 @@ def optimal_merge_pattern(sizes):
     Merge the files optimally to minimize the total cost of merging.
     Time complexity: O(n log n)
 
-    Args:
+    Parameters:
     - sizes (list[int]): List of files sizes.
 
     Returns:

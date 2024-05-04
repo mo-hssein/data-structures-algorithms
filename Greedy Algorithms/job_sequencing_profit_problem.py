@@ -5,7 +5,7 @@ def job_sequencing_profit(jobs, profits, deadlines):
     """
     Schedule jobs to maximize profit given their profits and deadlines.
 
-    Args:
+    Parameters:
     - jobs (List[str]): List of job names.
     - profits (List[int]): List of profits corresponding to each job.
     - deadlines (List[int]): List of deadlines corresponding to each job.
